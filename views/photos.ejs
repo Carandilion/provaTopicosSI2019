@@ -2,11 +2,14 @@
 <html lang="pt-br">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Lista de Usuários</title>
+
+    <title>Fotos do Album <%=albums[id-1]%></title>
 </head>
 
 <style>
@@ -17,26 +20,11 @@
 </style>
 
 <body>
-
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href=".">Lista de Usuários - por mtafrias</a>
+        <a class="navbar-brand" href="#">Fotos do Album <div class="text-info"><%=albums[photosId-1]%> </div> de <div
+                class="text-info"><%= nomes[id-1]%> </div>
+            </h1></a>
     </nav>
-
-    <div class="list-group">
-        <% pessoas.forEach(function(pessoa,i){ %>
-        <div class="list-group-item">
-            <div class="card bg-light">
-                <div class="card-body">
-                    <h5 class="card-title"><%= pessoa.name %></h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><%= pessoa.email %></h6>
-                    <p class="card-text"><%= pessoa.phone %></p>
-                    <button class="btn btn-danger btn-lg float-right" value="<%= i+1%>"
-                        onclick="albumLoad(this.value)">Abrir Album</button>
-                </div>
-            </div>
-        </div>
-        <% }); %>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -47,11 +35,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script>
-        function albumLoad(id) {
-            window.open("./"+id+"/albums/");
-        }
-    </script>
 </body>
 
 </html>

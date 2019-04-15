@@ -12,14 +12,24 @@
     <title>Albums</title>
 </head>
 
+<style>
+    body {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+</style>
+
 <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Albums de <%= nomes[id-1]%></h1></a>
+    </nav>
     <div class="container">
-        <h1 class="align-middle">Albums do Id: <%= identity %></h1>
         <div class="list-group">
             <% albums.forEach(function(album,i){ %>
-            <div class="list-group-item">
+            <div class="list-group-item list-group-item-light">
                 <%= album.title %>
-                <button type="button" class="btn btn-warning btn-lg float-right">
+                <button type="button" onclick="photosLoad(this.value)" value="<%= i+1 %>"
+                    class="btn btn-warning btn-lg float-right">
                     <i class="fas fa-camera"></i> Mostrar Fotos</button>
             </div>
             <% }); %>
@@ -35,6 +45,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script>
+        function photosLoad(id) {
+            var url = window.location.href;
+            window.open(url + '' + id);
+        }
+    </script>
 </body>
 
 </html>
