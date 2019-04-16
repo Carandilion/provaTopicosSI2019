@@ -1,8 +1,8 @@
 # Prova Tópicos SI - 1/2019
 
-Prova de Tópicos de SI consumindo a API do JSONPlaceHolder utilizando Express e Axios.
+Prova de Tópicos de SI consumindo a API do JSONPlaceHolder utilizando NoteJS com as biliotecas Express e Axios.
 
-## Como instalar
+## Como baixar
 
 Faça um clone do repositório através do comando:
 ```
@@ -34,6 +34,7 @@ Teste o servidor digitando o endereço na barra do seu navegador:
 ```
 localhost:3000/
 ```
+
 ## Dependências
 
 * [Express]
