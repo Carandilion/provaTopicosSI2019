@@ -1,6 +1,6 @@
-# Título do Projeto
+# Prova Tópicos SI - 1/2019
 
-Prova de Tópicos de SI.
+Prova de Tópicos de SI consumindo a API do JSONPlaceHolder utilizando Express e Axios.
 
 ## Como instalar
 
