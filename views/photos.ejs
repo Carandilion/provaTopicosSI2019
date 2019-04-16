@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Fotos do Album <%=albums[id-1]%></title>
+    <title>Fotos do album <%=albums[photosId]%> de <%=nomes[id-1]%></title>
 </head>
 
 <style>
@@ -21,10 +21,13 @@
 
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Fotos do Album <div class="text-info"><%=albums[photosId-1]%> </div> de <div
-                class="text-info"><%= nomes[id-1]%> </div>
-            </h1></a>
+        <a class="navbar-brand" href="#">Fotos do album <%=albums[photosId-1]%> de <%=nomes[id-1]%></a>
     </nav>
+    <div class="list-group">
+        <% photos.forEach(function(album,i){ %>
+        <div class="card list-group-item"><%=album.title%></div>
+        <% }); %>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

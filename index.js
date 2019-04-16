@@ -43,7 +43,7 @@ app.get('/:id/albums/', (req, resp) => {
 app.get('/:id/albums/:photosId', (req, resp) => {
     const id = req.params.id;
     const photosId = req.params.photosId;
-    axios.default.get(urlPhotos + '' + id + '')
+    axios.default.get(urlPhotos + '' + photosId + '')
         .then((data) => {
             resp.render('photos.ejs', { photos: data.data, nomes: nomes, albums: albums, id: id, photosId:photosId})
         })
