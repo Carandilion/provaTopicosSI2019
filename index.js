@@ -45,7 +45,7 @@ app.get('/:id/albums/:photosId', (req, resp) => {
     const photosId = req.params.photosId;
     axios.default.get(urlPhotos + '' + photosId + '')
         .then((data) => {
-            resp.render('photos.ejs', { photos: data.data, nomes: nomes, albums: albums, id: id, photosId:photosId})
+            resp.render('photos.ejs', { photos: data.data, nomes: nomes, albums: albums, id: id, photosId: photosId })
         })
         .catch((err) => {
             resp.json({ message: 'Erro' }).status(404);

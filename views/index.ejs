@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Lista de Usuários</title>
+    <link rel="icon" href="http://www.iconarchive.com/download/i95775/iconsmind/outline/Coding.ico">
 </head>
 
 <style>
@@ -16,15 +17,15 @@
     }
 </style>
 
-<body>
+<body class="bg-info">
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-danger">
         <a class="navbar-brand" href=".">Lista de Usuários - por mtafrias</a>
     </nav>
 
     <div class="list-group">
         <% pessoas.forEach(function(pessoa,i){ %>
-        <div class="list-group-item">
+        <div class="list-group-item bg-info border-0">
             <div class="card bg-light">
                 <div class="card-body">
                     <h5 class="card-title"><%= pessoa.name %></h5>
@@ -49,7 +50,7 @@
         crossorigin="anonymous"></script>
     <script>
         function albumLoad(id) {
-            window.open("./"+id+"/albums/");
+            window.open("./" + id + "/albums/");
         }
     </script>
 </body>
